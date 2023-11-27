@@ -6,6 +6,8 @@ const closeBtn = document.querySelector(".btn-close");
 const popup = document.querySelector(".popup");
 const notificationBell = document.querySelector(".notification-bell");
 const container = document.querySelector(".container");
+const dropperBox = document.querySelector(".dropper-box");
+const profilePopup = document.querySelector(".profile-popup");
 
 document.addEventListener("DOMContentLoaded", function () {
   // Open the first list item by default
@@ -61,11 +63,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   notificationBell.addEventListener("click", () => {
     popup.classList.toggle("visible");
+
+    if (profilePopup.classList.contains("visible")) {
+      profilePopup.classList.remove("visible");
+    }
+  });
+
+  dropperBox.addEventListener("click", () => {
+    profilePopup.classList.toggle("visible");
+
+    if (popup.classList.contains("visible")) {
+      popup.classList.remove("visible");
+    }
   });
 
   container.addEventListener("click", function (event) {
     if (popup.classList.contains("visible") && event.target === container) {
       popup.classList.remove("visible");
+    }
+
+    if (
+      profilePopup.classList.contains("visible") &&
+      event.target === container
+    ) {
+      profilePopup.classList.remove("visible");
     }
   });
 });
