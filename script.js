@@ -1,12 +1,12 @@
 const guideBtn = document.querySelector(".guide-btn");
 const guideContent = document.querySelector(".guide__content");
 const listItems = document.querySelectorAll(".list-item");
-const planPopup = document.querySelector(".plan-popup");
-const closeBtn = document.querySelector(".btn-close");
+const planPopup = document.querySelector(".popup-container");
+const closeBtn = document.querySelector(".close-btn");
 const popup = document.querySelector(".popup");
 const notificationBell = document.querySelector(".notification-bell");
 const container = document.querySelector(".container");
-const dropperBox = document.querySelector(".dropper-box");
+const dropperBox = document.querySelector(".profile-dropdown-box");
 const profilePopup = document.querySelector(".profile-popup");
 
 document.addEventListener("DOMContentLoaded", function () {

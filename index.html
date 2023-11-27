@@ -19,12 +19,15 @@
   <body>
     <div class="container flex-cols">
       <header class="header flex">
-        <a href="https://www.shopify.com/" class="a-logo">
-          <img
-            src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
-            alt="Shopify logo"
-            class="header_logo"
-        /></a>
+        <nav class="logo-nav">
+          <a href="https://www.shopify.com/" class="logo-link">
+            <img
+              src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
+              alt="Shopify logo"
+              class="header-logo"
+            />
+          </a>
+        </nav>
 
         <div class="search">
           <input type="text" class="search-input" placeholder="Search" />
@@ -45,7 +48,7 @@
           </svg>
         </div>
 
-        <div class="profile flex">
+        <div class="user-profile flex">
           <button class="notification-bell">
             <svg
               width="20"
@@ -62,17 +65,17 @@
               />
             </svg>
           </button>
-          <button class="dropper-box profile-dropper flex">
-            <span class="profile-dropper">Davii Collections</span>
-            <span class="profile-dropper__icon flex">DC</span>
+          <button class="profile-dropdown-box flex">
+            <span class="profile-name">Davii Collections</span>
+            <span class="profile-icon flex">DC</span>
           </button>
         </div>
       </header>
 
       <main class="main flex-cols">
-        <div class="popup flex-cols">
-          <div class="popup-header flex">
-            <p class="p-text">Alerts</p>
+        <aside class="popup flex-cols">
+          <header class="popup-header flex">
+            <h2 class="p-text">Alerts</h2>
             <span class="popup-svg flex">
               <button class="popup-btn">
                 <svg
@@ -82,18 +85,7 @@
                   viewBox="0 0 20 20"
                   fill="none"
                 >
-                  <path
-                    d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H16.25C16.6642 5.25 17 5.58579 17 6C17 6.41421 16.6642 6.75 16.25 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z"
-                    fill="#616161"
-                  />
-                  <path
-                    d="M6.75 14C6.75 13.5858 7.08579 13.25 7.5 13.25H12.5C12.9142 13.25 13.25 13.5858 13.25 14C13.25 14.4142 12.9142 14.75 12.5 14.75H7.5C7.08579 14.75 6.75 14.4142 6.75 14Z"
-                    fill="#616161"
-                  />
-                  <path
-                    d="M5.5 9.25C5.08579 9.25 4.75 9.58579 4.75 10C4.75 10.4142 5.08579 10.75 5.5 10.75H14.5C14.9142 10.75 15.25 10.4142 15.25 10C15.25 9.58579 14.9142 9.25 14.5 9.25H5.5Z"
-                    fill="#616161"
-                  />
+                  <!-- Your SVG path here -->
                 </svg>
               </button>
 
@@ -105,29 +97,20 @@
                   viewBox="0 0 20 20"
                   fill="none"
                 >
-                  <path
-                    d="M13.2803 9.03033C13.5732 8.73744 13.5732 8.26256 13.2803 7.96967C12.9874 7.67678 12.5126 7.67678 12.2197 7.96967L9.25 10.9393L8.03033 9.71967C7.73744 9.42678 7.26256 9.42678 6.96967 9.71967C6.67678 10.0126 6.67678 10.4874 6.96967 10.7803L8.71967 12.5303C9.01256 12.8232 9.48744 12.8232 9.78033 12.5303L13.2803 9.03033Z"
-                    fill="#616161"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.5 10C15.5 13.0376 13.0376 15.5 10 15.5C6.96243 15.5 4.5 13.0376 4.5 10C4.5 6.96243 6.96243 4.5 10 4.5C13.0376 4.5 15.5 6.96243 15.5 10Z"
-                    fill="#616161"
-                  />
+                  <!-- Your SVG path here -->
                 </svg>
               </button>
             </span>
-          </div>
+          </header>
 
           <p class="popup-content">
             Alerts about your store and account will show here
           </p>
-        </div>
+        </aside>
 
-        <div class="profile-popup flex-cols">
+        <aside class="profile-popup flex-cols">
           <header class="profile-header flex-cols">
-            <div class="profile-con flex">
+            <div class="profile-container flex">
               <button class="profile-box flex">
                 <span class="profile-icon flex">DC</span>
                 <span class="profile-name">Davii Collections</span>
@@ -167,6 +150,7 @@
               <p class="p-text">All store</p>
             </div>
           </header>
+
           <nav class="nav">
             <ul class="items flex-cols">
               <li class="nav-item">Help Center</li>
@@ -176,6 +160,7 @@
               <li class="nav-item">Keyboard shortcuts</li>
             </ul>
           </nav>
+
           <ul class="items flex-cols">
             <li class="nav-item flex-cols">
               <p class="name">David Micheal</p>
@@ -184,36 +169,37 @@
             <li class="nav-item">Manage account</li>
             <li class="nav-item">Log out</li>
           </ul>
-        </div>
+        </aside>
 
-        <div class="plan-popup flex">
-          <p class="plan-text">
+        <div class="popup-container flex">
+          <p class="popup-text">
             Extend your trial for $1/month for 3 months on select plans.
           </p>
 
-          <span class="btn-select-plan flex">
-            <button class="btn-plan">Select a plan</button>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 21 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="btn-close"
-            >
-              <path
-                d="M14.4697 15.0303C14.7626 15.3232 15.2374 15.3232 15.5303 15.0303C15.8232 14.7374 15.8232 14.2626 15.5303 13.9697L11.5607 10L15.5303 6.03033C15.8232 5.73744 15.8232 5.26256 15.5303 4.96967C15.2374 4.67678 14.7626 4.67678 14.4697 4.96967L10.5 8.93934L6.53033 4.96967C6.23744 4.67678 5.76256 4.67678 5.46967 4.96967C5.17678 5.26256 5.17678 5.73744 5.46967 6.03033L9.43934 10L5.46967 13.9697C5.17678 14.2626 5.17678 14.7374 5.46967 15.0303C5.76256 15.3232 6.23744 15.3232 6.53033 15.0303L10.5 11.0607L14.4697 15.0303Z"
-                fill="#fff"
-              />
-            </svg>
-          </span>
+          <div class="popup-actions flex">
+            <button class="select-plan-btn">Select a plan</button>
+            <span class="close-btn">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4697 15.0303C14.7626 15.3232 15.2374 15.3232 15.5303 15.0303C15.8232 14.7374 15.8232 14.2626 15.5303 13.9697L11.5607 10L15.5303 6.03033C15.8232 5.73744 15.8232 5.26256 15.5303 4.96967C15.2374 4.67678 14.7626 4.67678 14.4697 4.96967L10.5 8.93934L6.53033 4.96967C6.23744 4.67678 5.76256 4.67678 5.46967 4.96967C5.17678 5.26256 5.17678 5.73744 5.46967 6.03033L9.43934 10L5.46967 13.9697C5.17678 14.2626 5.17678 14.7374 5.46967 15.0303C5.76256 15.3232 6.23744 15.3232 6.53033 15.0303L10.5 11.0607L14.4697 15.0303Z"
+                  fill="#fff"
+                />
+              </svg>
+            </span>
+          </div>
         </div>
 
         <div class="setup-guide flex-cols">
-          <div class="guide-container flex">
-            <div class="guide flex-cols">
+          <section class="guide-container flex">
+            <article class="guide flex-cols">
               <header class="guide__header flex-cols">
-                <h3 class="guide__title">Setup guide</h3>
+                <h2 class="guide__title">Setup guide</h2>
                 <p class="guide__subtitle">
                   Use this personalized guide to get your store up and running.
                 </p>
@@ -224,7 +210,7 @@
                   <div class="guide__progress-bar-fill"></div>
                 </div>
               </div>
-            </div>
+            </article>
 
             <button type="button" class="guide-btn">
               <svg
@@ -242,7 +228,7 @@
                 />
               </svg>
             </button>
-          </div>
+          </section>
 
           <ul class="guide__content flex-cols hidden">
             <li class="list-item flex">
@@ -267,7 +253,7 @@
               </svg>
 
               <div class="content flex-cols">
-                <p class="p-text">Customize your online store</p>
+                <h2 class="p-text">Customize your online store</h2>
                 <div class="hidden-box flex">
                   <div class="wrapper flex-cols">
                     <p class="text">
@@ -314,7 +300,7 @@
               </svg>
 
               <div class="content">
-                <p class="p-text">Add your first product</p>
+                <h2 class="p-text">Add your first product</h2>
                 <div class="hidden-box flex">
                   <div class="wrapper flex-cols">
                     <p class="text">
@@ -363,7 +349,7 @@
               </svg>
 
               <div class="content">
-                <p class="p-text">Add a custom domain</p>
+                <h2 class="p-text">Add a custom domain</h2>
                 <div class="hidden-box flex">
                   <div class="wrapper flex-cols">
                     <p class="text">
@@ -411,7 +397,7 @@
               </svg>
 
               <div class="content">
-                <p class="p-text">Name your store</p>
+                <h2 class="p-text">Name your store</h2>
                 <div class="hidden-box flex">
                   <div class="wrapper flex-cols">
                     <p class="text">
@@ -459,7 +445,7 @@
               </svg>
 
               <div class="content">
-                <p class="p-text">Setup a payment provider</p>
+                <h2 class="p-text">Setup a payment provider</h2>
                 <div class="hidden-box flex">
                   <div class="wrapper flex-cols">
                     <p class="text">

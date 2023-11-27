@@ -41,12 +41,12 @@ body {
     padding: 1.2rem 1.6rem;
     background-color: #1a1a1a;
 
-    .a-logo:focus {
+    .logo-link:focus {
       outline: none;
       border: 3px solid #ff9301;
     }
 
-    .header_logo {
+    .header-logo {
       width: 10.5rem;
       height: 3rem;
     }
@@ -93,19 +93,19 @@ body {
       }
     }
 
-    .profile {
+    .user-profile {
       gap: 0.8rem;
 
       .notification-bell,
-      .dropper-box {
+      .profile-dropdown-box {
         height: 3.2rem;
         background-color: #303030;
         border: none;
+        border-radius: 0.8rem;
       }
 
       .notification-bell {
         width: 3.2rem;
-        border-radius: 0.8rem;
         text-align: center;
         cursor: pointer;
 
@@ -119,10 +119,9 @@ body {
         }
       }
 
-      .dropper-box {
+      .profile-dropdown-box {
         gap: 0.8rem;
         padding: 0 0 0 0.8rem;
-        border-radius: 0.8rem;
 
         &:hover, &:active {
           background-color: #616161;
@@ -134,14 +133,14 @@ body {
           border: 3px solid #ff9301;
         }
 
-        .profile-dropper {
+        .profile-name {
           border: none;
           background-color: transparent;
           color: #b5b5b5;
           cursor: pointer;
         }
 
-        .profile-dropper__icon {
+        .profile-icon {
           justify-content: center;
           height: 100%;
           width: 3.2rem;
@@ -242,7 +241,7 @@ body {
           font-weight: 400;
         }
 
-        .profile-con {
+        .profile-container {
           justify-content: space-between;
           padding: 4px 12px 4px 8px;
           border-radius: 0.8rem;
@@ -305,23 +304,23 @@ body {
       }
     }
 
-    .plan-popup {
+    .popup-container {
       padding: 1.2rem 0.8rem 1.2rem 1.6rem;
       border-radius: 0.8rem;
       justify-content: space-between;
       background-color: #1a1a1a;
 
-      .plan-text {
+      .popup-text {
         color: #e3e3e3;
         font-size: 1.3rem;
         font-weight: 500;
       }
 
-      .btn-select-plan {
+      .popup-actions {
         padding: 0.6rem 1.2rem;
         gap: 0.8rem;
 
-        .btn-plan {
+        .select-plan-btn {
           padding: 0.8rem 1.6rem;
           background-color: #fff;
           color: #323232;
