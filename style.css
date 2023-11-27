@@ -194,6 +194,10 @@ body {
             border: 3px solid #ff9301;
           }
         }
+
+        .btn-close {
+          cursor: pointer;
+        }
       }
     }
 
@@ -281,7 +285,7 @@ body {
 
             .p-text {
               font-size: 1.3rem;
-              font-weight: 600;
+              font-weight: 500;
             }
 
             .hidden-box {
@@ -346,6 +350,11 @@ body {
               }
             }
           }
+
+          &.active .content .p-text {
+            font-weight: 600;
+            color: #303030;
+          }
         }
       }
     }
@@ -358,10 +367,6 @@ body {
   background: #f3f3f3;
 }
 
-/* .visible {
-  display: flex;
-} */
-
 .hidden {
   display: none;
 }
@@ -370,8 +375,3 @@ body {
   transform: rotate(180deg);
   transition: all ease-in 0.3s;
 }
-
-/* :focus {
-  outline: none;
-  border-bottom: 3px solid #1b4ea9;
-} */

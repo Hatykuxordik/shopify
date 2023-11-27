@@ -1,8 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const guideBtn = document.querySelector(".guide-btn");
-  const guideContent = document.querySelector(".guide__content");
-  const listItems = document.querySelectorAll(".list-item");
+const guideBtn = document.querySelector(".guide-btn");
+const guideContent = document.querySelector(".guide__content");
+const listItems = document.querySelectorAll(".list-item");
+const planPopup = document.querySelector(".plan-popup");
+const closeBtn = document.querySelector(".btn-close");
 
+document.addEventListener("DOMContentLoaded", function () {
   // Open the first list item by default
   listItems[0].classList.add("active");
   const firstHiddenBox = listItems[0].querySelector(".hidden-box");
@@ -48,5 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
         hiddenBox.style.display = "none";
       }
     });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    planPopup.style.visibility = "hidden";
   });
 });
