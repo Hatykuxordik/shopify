@@ -492,6 +492,12 @@ body {
               display: none;
               gap: 9.6rem;
               transition: display 0.3s;
+
+              @media screen and (max-width: 50em) {
+                .illust {
+                  display: none;
+                }
+              }
             }
 
             .wrapper {
@@ -553,6 +559,12 @@ body {
             }
           }
 
+          @media screen and (max-width: 50em) {
+            .content {
+              gap: 0;
+            }
+          }
+
           &.active .content .p-text {
             font-weight: 600;
             color: #303030;
@@ -573,6 +585,12 @@ body {
   border-radius: 1.8rem;
   border: 1px solid #dbdbdb;
   background: #f3f3f3;
+}
+
+@media screen and (max-width: 50em) {
+  .active {
+    border: 1px solid transparent;
+  }
 }
 
 .hidden {
