@@ -30,6 +30,8 @@ body {
 
 /* ---- HEADER SECTION ----- */
 .container {
+  position: relative;
+  width: 100%;
   height: 100vh;
   gap: 3.2rem;
   background-color: #f1f1f1;
@@ -162,17 +164,17 @@ body {
 
   /* ---- GUIDE SECTION ---- */
   .main {
-    position: relative;
     margin: 0 auto;
-    width: 50vw;
+    width: 100%;
+    max-width: 80rem;
     gap: 1.6rem;
 
     .popup {
       visibility: hidden;
       position: absolute;
-      top: -10%;
-      right: -48%;
-      width: 50%;
+      max-width: 38.5rem;
+      top: 6.2rem;
+      right: 1%;
       padding: 1.6rem;
       gap: 1.6rem;
       border-radius: 1.4rem;
@@ -217,11 +219,11 @@ body {
     }
 
     .profile-popup {
-      position: absolute;
-      top: -4%;
-      right: -48%;
       visibility: hidden;
-      width: 40%;
+      position: absolute;
+      width: 32rem;
+      top: 6.2rem;
+      right: 1%;
       padding: 0.6rem 0.3rem;
       gap: 0.4rem;
       border-radius: 1.4rem;
@@ -507,7 +509,7 @@ body {
             &:active {
               border-radius: 6px;
               background: #e7e7e7;
-              color: #fff;
+              color: #323232;
             }
           }
         }

@@ -58,6 +58,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const hiddenBox = item.querySelector(".hidden-box");
         hiddenBox.style.display = "flex";
       }
+
+      // Add event listener for the content-btn button
+      const contentBtn = item.querySelector(".content-btn");
+      contentBtn.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent the click event from reaching the list item
+        item.classList.remove("active");
+        const hiddenBox = item.querySelector(".hidden-box");
+        hiddenBox.style.display = "none";
+      });
+
+      // Add event listener for the plain-btn button
+      const plainBtn = item.querySelector(".plain-btn");
+      plainBtn.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent the click event from reaching the list item
+        item.classList.remove("active");
+        const hiddenBox = item.querySelector(".hidden-box");
+        hiddenBox.style.display = "none";
+      });
     });
   });
 
@@ -120,6 +138,28 @@ const toggleState = (event) => {
       progressText.textContent = `${completedCount} / 5 completed`;
       progressBarFill.style.width = `${completedCount * 20}%`;
       checkButton.classList.add("checked");
+
+      // Find the index of the currently clicked button
+      const currentIndex = Array.from(listItems).indexOf(
+        checkButton.closest(".list-item")
+      );
+
+      // Calculate the index of the next item
+      const nextIndex = (currentIndex + 1) % listItems.length;
+
+      // Remove "active" class from all items
+      listItems.forEach((item) => {
+        item.classList.remove("active");
+        const hiddenBox = item.querySelector(".hidden-box");
+        hiddenBox.style.display = "none";
+      });
+
+      // Add "active" class to the next item and show its hiddenBox
+      if (nextIndex !== 0) {
+        listItems[nextIndex].classList.add("active");
+        const nextHiddenBox = listItems[nextIndex].querySelector(".hidden-box");
+        nextHiddenBox.style.display = "flex";
+      }
     }, 1500);
   } else {
     checkButton.style.borderRadius = "0";
