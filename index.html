@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="container flex-cols">
-      <header class="header flex">
+      <header class="header flex" role="heading" aria-label="heading">
         <nav class="logo-nav">
           <a href="https://www.shopify.com/" class="logo-link">
             <img
@@ -29,8 +29,13 @@
           </a>
         </nav>
 
-        <div class="search">
-          <input type="text" class="search-input" placeholder="Search" />
+        <nav class="search" aria-label="search bar">
+          <input
+            type="text"
+            role="search"
+            class="search-input"
+            placeholder="Search"
+          />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -46,10 +51,13 @@
               fill="#B5B5B5"
             />
           </svg>
-        </div>
+        </nav>
 
-        <div class="user-profile flex">
-          <button class="notification-bell">
+        <nav class="user-profile flex" aria-label="notification and profile">
+          <button
+            class="notification-bell"
+            title="click this button to open the profile menu list"
+          >
             <svg
               width="20"
               height="20"
@@ -69,7 +77,7 @@
             <span class="profile-name">Davii Collections</span>
             <span class="profile-icon flex">DC</span>
           </button>
-        </div>
+        </nav>
       </header>
 
       <main class="main flex-cols">
@@ -177,8 +185,10 @@
           </p>
 
           <div class="popup-actions flex">
-            <button class="select-plan-btn">Select a plan</button>
-            <span class="close-btn">
+            <a href="https://www.shopify.com/pricing" class="select-plan-btn"
+              >Select a plan</a
+            >
+            <button class="close-btn">
               <svg
                 width="20"
                 height="20"
@@ -191,7 +201,7 @@
                   fill="#fff"
                 />
               </svg>
-            </span>
+            </button>
           </div>
         </div>
 
