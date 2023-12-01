@@ -12,13 +12,13 @@ const container = select(".container");
 const dropdown = select(".profile-dropdown-box");
 const profilePopup = select(".profile-popup");
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   // Open the first list item by default
   listItems[0].classList.add("active");
   const firstHiddenBox = listItems[0].querySelector(".hidden-box");
   firstHiddenBox.style.display = "flex";
 
-  const openFirstListItem = () => {
+  const openFirstListItem = function () {
     listItems.forEach((item) => {
       item.classList.remove("active");
       const hiddenBox = item.querySelector(".hidden-box");
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     firstHiddenBox.style.display = "flex";
   };
 
-  guideBtn.addEventListener("click", () => {
+  guideBtn.addEventListener("click", function () {
     // Toggle upside-down SVG on button click
     guideBtn.classList.toggle("rotate");
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   listItems.forEach((item) => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", function () {
       const isActive = item.classList.contains("active");
 
       listItems.forEach((otherItem) => {
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  closeBtn.addEventListener("click", () => {
+  closeBtn.addEventListener("click", function () {
     planPopup.style.visibility = "hidden";
   });
 
@@ -92,11 +92,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  notificationBell.addEventListener("click", () => {
+  notificationBell.addEventListener("click", function () {
     togglePopupVisibility(popup);
   });
 
-  dropdown.addEventListener("click", () => {
+  dropdown.addEventListener("click", function () {
     togglePopupVisibility(profilePopup);
   });
 
@@ -128,7 +128,7 @@ const toggleState = (event) => {
       'url(\'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 28 28" fill="none"><path d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2" stroke="%238a8a8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>\')';
     checkButton.style.animation = "spin 2s linear infinite";
 
-    setTimeout(() => {
+    setTimeout(function () {
       checkButton.style.backgroundImage =
         "url('https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg')";
       checkButton.style.animation = "none";
